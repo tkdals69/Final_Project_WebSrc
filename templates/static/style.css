@@ -1,0 +1,40 @@
+.recommend-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.recommend-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.recommend-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.recommend-form input {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.recommend-form button {
+  padding: 10px;
+  background-color: #0056b3;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recommend-form button:hover {
+  background-color: #003f88;
+}
