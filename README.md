@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adu: AI 기반 진로 추천 웹앱 소개</title>
-  <style>
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9fafb; color: #333; margin: 2rem; line-height: 1.6; }
-    h1, h2, h3 { color: #6b21a8; }
-    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    h2 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; }
-    h3 { font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 1rem; }
-    p { margin-bottom: 1rem; }
-    ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
-    table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; }
-    th, td { border: 1px solid #ddd; padding: 0.5rem 1rem; }
-    th { background-color: #e9d5ff; text-align: left; }
-    code { background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-family: monospace; }
-    blockquote { border-left: 4px solid #a78bfa; padding-left: 1rem; color: #6b21a8; font-style: italic; margin: 1rem 0; }
-    .emoji { font-size: 1.2rem; margin-right: 0.3rem; vertical-align: middle; }
-  </style>
-</head>
-<body>
+
 
   <h1><span class="emoji">🚀</span>Adu: AI 기반 진로 추천 웹앱 소개</h1>
   
