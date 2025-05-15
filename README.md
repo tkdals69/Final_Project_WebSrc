@@ -155,4 +155,12 @@
       <br/>GitHub Actions, Jenkins 등으로 자동 빌드, 테스트, Docker 이미지 생성, 배포 프로세스 구현 가능
     </li>
     <li><strong>보안 관리</strong>  
-      <br/>API 키 및 시크릿은 <code>.env</code> 파일이나 시크릿 매니저에서
+      <br/>API 키 및 시크릿은 <code>.env</code> 파일이나 시크릿 매니저에서안전하게 관리하고, 공개 저장소에 노출하지 않도록 주의
+    </li>
+    <li><strong>배포 환경 권장</strong>  
+      <br/>Docker 기반 컨테이너 배포(AWS ECS, GCP Cloud Run, Kubernetes 등) 및 HTTPS 적용과 인증서 자동 갱신 권장
+    </li>
+    <li><strong>운영 모니터링</strong>  
+      <br/>Prometheus, Grafana, ELK 스택 등 로그 및 메트릭 수집 도구 활용, 장애 대응 체계 마련
+    </li>
+  </ul>
