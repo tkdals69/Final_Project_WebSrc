@@ -1,7 +1,7 @@
 # routes/edit.py
 
 from flask import Blueprint, render_template, request
-from utils.gemini import call_gemini
+from services.gemini_service import call_gemini
 
 bp = Blueprint('edit', __name__, url_prefix='/edit')
 

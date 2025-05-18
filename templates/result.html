@@ -15,9 +15,9 @@
   {% endif %}
 
   <div class="mt-8 flex justify-center gap-4">
-    <a href="{{ url_for('recommend') }}" class="text-sm text-purple-600 hover:underline">다시 입력하기</a>
+    <a href="{{ url_for('recommend.recommend') }}" class="text-sm text-purple-600 hover:underline">다시 입력하기</a>
 
-    <form method="POST" action="{{ url_for('download_pdf') }}">
+    <form method="POST" action="{{ url_for('recommend.download_pdf') }}">
       <input type="hidden" name="content" value="{{ recommendation }}">
       <button type="submit" class="text-sm text-gray-600 hover:text-gray-800">PDF로 저장</button>
     </form>

@@ -1,7 +1,10 @@
 # routes/recommend.py
 
 from flask import Blueprint, render_template, request
-from utils.gemini import call_gemini
+from services.gemini_service import call_gemini
+from flask import send_file, request
+from fpdf import FPDF
+import io
 
 bp = Blueprint('recommend', __name__, url_prefix='/recommend')
 
@@ -53,3 +56,35 @@ def recommend():
     """
     recommendation = call_gemini(prompt)
     return render_template('result.html', recommendation=recommendation)
+
+from flask import send_file, request
+from fpdf import FPDF
+import io
+
+@bp.route('/download_pdf', methods=['POST'])
+def download_pdf():
+    # 폼에서 추천 결과 내용을 가져옴 (hidden input 또는 textarea로 전달 필요)
+    recommendation = request.form.get('recommendation', '')
+
+    # PDF 객체 생성
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.add_font('Nanum', '', '/usr/share/fonts/truetype/nanum/NanumGothic.ttf', uni=True)
+    pdf.set_font('Nanum', size=12)  # 한글 폰트 사용
+
+    # 줄바꿈 처리
+    for line in recommendation.split('\n'):
+        pdf.cell(0, 10, txt=line, ln=True)
+
+    # PDF를 메모리로 저장
+    pdf_output = io.BytesIO()
+    pdf.output(pdf_output)
+    pdf_output.seek(0)
+
+    return send_file(
+        pdf_output,
+        as_attachment=True,
+        download_name='recommendation.pdf',
+        mimetype='application/pdf'
+    )
+
