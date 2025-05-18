@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}커리큘럼 추천 결과 - Adu{% endblock %}
+
+{% block content %}
+<section class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md whitespace-pre-wrap text-gray-900">
+  <h2 class="text-3xl font-bold text-blue-700 mb-6 text-center">📚 AI 추천 커리큘럼</h2>
+
+  {% if curriculum %}
+    <article class="prose max-w-full">
+      {{ curriculum | markdown }}
+    </article>
+  {% else %}
+    <p class="text-red-600 font-semibold text-center">커리큘럼 결과를 불러오는 데 문제가 발생했습니다.</p>
+  {% endif %}
+
+  <div class="mt-8 flex justify-center gap-4">
+    <a href="{{ url_for('curriculum') }}" class="text-sm text-blue-600 hover:underline">다시 입력하기</a>
+
+    <form method="POST" action="{{ url_for('download_pdf') }}">
+      <input type="hidden" name="content" value="{{ curriculum }}">
+      <button type="submit" class="text-sm text-gray-600 hover:text-gray-800">PDF로 저장</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

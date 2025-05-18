@@ -1,0 +1,12 @@
+{
+  "name": "adu-career-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build-css": "tailwindcss -i /root/Webpj/input.css -o ./static/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14"
+  }
+}
