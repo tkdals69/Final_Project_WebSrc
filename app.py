@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 엔트리포인트
 
 from flask import Flask
@@ -38,6 +39,8 @@ if __name__ == '__main__':
     app = create_app()
     app.run(host='0.0.0.0', port=5000)
 =======
+=======
+>>>>>>> e9fc13c922095752ebf5d8cf7c9529052e16898b
 import os
 import requests
 from flask import Flask, render_template, request, make_response
@@ -241,4 +244,7 @@ def download_pdf():
 # 서버 실행
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+<<<<<<< HEAD
+>>>>>>> e9fc13c922095752ebf5d8cf7c9529052e16898b
+=======
 >>>>>>> e9fc13c922095752ebf5d8cf7c9529052e16898b
