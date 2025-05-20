@@ -3,8 +3,8 @@
 from flask import Blueprint, render_template, request
 from services.gemini_service import call_gemini
 from flask import send_file, request
-from fpdf import FPDF
 import io
+from fpdf import FPDF
 
 bp = Blueprint('recommend', __name__, url_prefix='/recommend')
 

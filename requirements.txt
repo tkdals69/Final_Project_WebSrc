@@ -3,3 +3,4 @@ openai
 python-dotenv
 xhtml2pdf
 markdown
+fpdf

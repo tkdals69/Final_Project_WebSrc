@@ -17,10 +17,7 @@
   <div class="mt-8 flex justify-center gap-4">
     <a href="{{ url_for('edit.edit') }}" class="text-sm text-indigo-600 hover:underline">다시 작성하기</a>
 
-    <form method="POST" action="{{ url_for('edit.download_pdf') }}">
-      <input type="hidden" name="content" value="{{ feedback }}">
-      <button type="submit" class="text-sm text-gray-600 hover:text-gray-800">PDF로 저장</button>
-    </form>
+    
   </div>
 </section>
 {% endblock %}
