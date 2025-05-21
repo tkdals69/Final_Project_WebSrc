@@ -23,7 +23,7 @@ pipeline {
             steps {
                 withCredentials([
                     usernamePassword(
-                        credentialsId: 'dockerhub-creds',    // ← 오타 수정: credentialsId (아니고 credentialsld)
+                        credentialsId: 'klksm2',   
                         usernameVariable: 'DOCKER_USER',
                         passwordVariable: 'DOCKER_PASS'
                     )
