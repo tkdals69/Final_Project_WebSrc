@@ -22,11 +22,11 @@ pipeline {
         // 2. Docker 이미지 빌드
         stage('Docker image build') {
             steps {
-                {
+                
                     sh "docker build -t ${dockerHubRegistry}/flask-app:${currentBuild.number} ."
                     sh "docker tag ${dockerHubRegistry}/flask-app:${currentBuild.number} ${dockerHubRegistry}/flask-app:latest"
                 }
-            }
+            
             post {
                 failure { echo 'Docker image build failure!' }
                 success { echo 'Docker image build success!' }
