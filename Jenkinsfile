@@ -70,7 +70,7 @@ pipeline {
                 dir("gitOpsRepo") {
                     git branch: "main",
                         credentialsId: githubCredential,
-                        url: 'https://github.com/klksm2/manifest.git'
+                        url: 'https://github.com/tkdals69/Final_Project_menifest.git'
 
                     sh "git config --global user.email 'klksm99@nate.com'"
                     sh "git config --global user.name 'klksm2'"
