@@ -22,7 +22,7 @@ pipeline {
         // 2. Docker 이미지 빌드
         stage('Docker image build') {
             steps {
-                dir('flask-app') {
+                {
                     sh "docker build -t ${dockerHubRegistry}/flask-app:${currentBuild.number} ."
                     sh "docker tag ${dockerHubRegistry}/flask-app:${currentBuild.number} ${dockerHubRegistry}/flask-app:latest"
                 }
