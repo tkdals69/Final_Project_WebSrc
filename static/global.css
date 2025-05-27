@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography plugin 스타일 포함 */
+@import "tailwindcss/typography";
+/* 전체 body 기본 */
+body {
+    @apply bg-gray-50 text-gray-800 font-sans;
+    min-height: 100vh;
+  }
+  
+  /* 헤더 - 네비게이션 바 */
+  header {
+    @apply fixed top-0 left-0 w-full bg-white shadow-md z-50;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  header .container {
+    @apply max-w-7xl mx-auto flex justify-between items-center py-4 px-6;
+  }
+  header .brand {
+    @apply text-purple-700 font-extrabold text-lg;
+  }
+  header nav a {
+    @apply text-gray-600 hover:text-purple-700 transition px-4 py-2;
+  }
+  
+  /* 메인 컨텐츠 영역 */
+  main {
+    @apply max-w-4xl mx-auto mt-24 px-4 sm:px-6 lg:px-8;
+    min-height: calc(100vh - 96px);
+  }
+  
+  /* 카드 컴포넌트 */
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 border border-gray-100 transition hover:shadow-lg;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+  }
+  
+  /* 버튼 기본 스타일 */
+  .btn {
+    @apply rounded-md font-semibold cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transition;
+  }
+  .btn-primary {
+    @apply bg-purple-600 text-white px-5 py-2 hover:bg-purple-700;
+  }
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-700 px-5 py-2 hover:bg-gray-300;
+  }
+  
+  /* 폼 요소 스타일 */
+  input[type="text"],
+  textarea {
+    @apply w-full border border-gray-300 rounded-md p-3 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  label {
+    @apply block mb-2 font-semibold text-gray-700;
+  }
+  
+  /* 마크다운 렌더링 스타일 */
+  .markdown-body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #2d3748;
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4 {
+    color: #6b46c1;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .markdown-body p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .markdown-body ul,
+  .markdown-body ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .markdown-body li {
+    margin-bottom: 0.5rem;
+  }
+  .markdown-body code {
+    background-color: #f7fafc;
+    padding: 0.15rem 0.3rem;
+    border-radius: 0.3rem;
+    font-family: "Fira Mono", monospace;
+    font-size: 0.9rem;
+    color: #d53f8c;
+  }
+  .markdown-body pre {
+    background-color: #edf2f7;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .markdown-body blockquote {
+    border-left: 4px solid #9f7aea;
+    color: #6b46c1;
+    font-style: italic;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    background-color: #faf5ff;
+    border-radius: 0.25rem;
+  }
+  
+  /* 반응형: 모바일 대응 */
+  @media (max-width: 640px) {
+    main {
+      margin-top: 4.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    header .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  /* 제목 스타일 */
+h1, h2, h3, h4 {
+  @apply font-bold text-gray-800 mt-6 mb-3;
+}
+
+h1 {
+  @apply text-3xl;
+}
+h2 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-xl;
+}
+
+/* 문단 */
+p {
+  @apply mb-4 leading-relaxed;
+}
+
+/* 리스트 */
+ul, ol {
+  @apply list-disc list-inside mb-4;
+}
+li {
+  @apply mb-1;
+}
+
+/* 강조 텍스트 */
+strong {
+  @apply font-semibold;
+}
+
+/* 코드 블록 */
+pre {
+  @apply bg-gray-100 p-4 rounded overflow-x-auto mb-4;
+}
+
+/* 인라인 코드 */
+code {
+  @apply bg-gray-200 px-1 rounded;
+}

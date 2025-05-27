@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Adu: 진로 추천 서비스{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <meta name="description" content="Adu - AI 기반 진로 추천 및 자기소개서 피드백 서비스">
+
+  <!-- Global CSS (선택사항) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- 로딩 오버레이 -->
+  <div id="loader" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="w-16 h-16 border-4 border-t-4 border-gray-200 rounded-full animate-spin"></div>
+  </div>
+
+  <!-- Flash 메시지 -->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="fixed top-20 right-4 z-50 space-y-2">
+        {% for msg in messages %}
+          <div class="bg-green-100 text-green-800 px-4 py-2 rounded shadow animate-bounce-in">
+            {{ msg }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <!-- 내비게이션 바 -->
+  <header class="bg-white shadow p-4 fixed top-0 left-0 w-full z-20">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="/" class="text-xl font-bold text-purple-700">Adu</a>
+      <nav class="space-x-4 text-sm text-gray-600 hidden md:block">
+        <a href="{{ url_for('recommend.recommend') }}" class="hover:text-purple-700">직업 추천</a>
+        <a href="{{ url_for('curriculum.curriculum') }}" class="hover:text-blue-700">커리큘럼</a>
+        <a href="{{ url_for('edit.edit') }}" class="hover:text-indigo-700">자기소개서 첨삭</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="pt-24 px-4">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="text-center text-sm text-gray-400 mt-10 py-8">
+    © 2025 Adu. All rights reserved.
+  </footer>
+
+  <!-- 로딩 스크립트 -->
+  <script src="{{ url_for('static', filename='loading.js') }}"></script>
+</body>
+</html>
