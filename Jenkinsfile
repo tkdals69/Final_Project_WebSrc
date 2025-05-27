@@ -76,9 +76,9 @@ pipeline {
                     sh "git config --global user.name 'klksm2'"
 
                     // flask-deployment.yaml의 image 태그를 최신 빌드번호로 치환
-                    sh "sed -i 's|image: ${dockerHubRegistry}/flask-app:.*|image: ${dockerHubRegistry}/flask-app:${currentBuild.number}|g' flask-deployment.yaml"
+                    sh "sed -i 's|image: ${dockerHubRegistry}/flask-app:.*|image: ${dockerHubRegistry}/flask-app:${currentBuild.number}|g' deploy.yaml"
 
-                    sh "git add flask-deployment.yaml"
+                    sh "git add deploy.yaml"
                     sh "git commit -m '[UPDATE] flask image version ${currentBuild.number}' || true"
 
                     withCredentials([gitUsernamePassword(credentialsId: githubCredential, gitToolName: 'git-tool')]) {
