@@ -68,7 +68,7 @@ pipeline {
                 sh "rm -rf gitOpsRepo"
                 sh "mkdir -p gitOpsRepo"
                 dir("gitOpsRepo") {
-                    git branch: "main",
+                    git branch: "master",
                         credentialsId: githubCredential,
                         url: 'https://github.com/tkdals69/Final_Project_menifest.git'
 
