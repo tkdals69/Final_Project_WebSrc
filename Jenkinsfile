@@ -82,7 +82,7 @@ pipeline {
                     sh "git commit -m '[UPDATE] flask image version ${currentBuild.number}' || true"
 
                     withCredentials([gitUsernamePassword(credentialsId: githubCredential, gitToolName: 'git-tool')]) {
-                        sh "git remote set-url origin https://github.com/klksm2/manifest.git"
+                        sh "git remote set-url origin https://github.com/tkdals69/Final_Project_menifest.git"
                         sh "git push -u origin main --force"
                     }
                 }
