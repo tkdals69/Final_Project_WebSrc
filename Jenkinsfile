@@ -18,6 +18,13 @@ pipeline {
                 success { echo 'Repository checkout success' }
             }
         }
+        stage('Docker login') {
+    steps {
+        withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+            sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+            }
+         }
+       }  
 
         // 2. Docker 이미지 빌드
         stage('Docker image build') {
