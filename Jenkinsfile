@@ -83,7 +83,7 @@ pipeline {
 
                     withCredentials([gitUsernamePassword(credentialsId: githubCredential, gitToolName: 'git-tool')]) {
                         sh "git remote set-url origin https://github.com/tkdals69/Final_Project_menifest.git"
-                        sh "git push -u origin main --force"
+                        sh "git push -u origin master --force"
                     }
                 }
             }
