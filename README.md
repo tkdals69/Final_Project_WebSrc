@@ -1,9 +1,22 @@
 
 
-  <h1><span class="emoji">🚀</span>Adu: AI 기반 진로 추천 웹앱 소개</h1>
-    <h2><span class="emoji">🌟</span>연관 Repository</h2>
-  <a href="[https://www.google.com](https://github.com/tkdals69/Final_Project_menifest)">menifest_reopsitory</a>
-  <a href="[https://www.google.com](https://github.com/tkdals69/FinalProject_CloudForm)">CloudWatch_repository</a>
+  <h1><span class="emoji">🚀</span> Adu: AI 기반 진로 추천 웹앱 소개</h1>
+  
+  <h2><span class="emoji">⭐</span> 연관 Repository</h2>
+  
+  <p>
+    <span class="emoji">🐙</span>
+    <a href="https://github.com/tkdals69/Final_Project_menifest" target="_blank">
+      menifest_repository
+    </a>
+  </p>
+  <p>
+    <span class="emoji">🐙</span>
+    <a href="https://github.com/tkdals69/FinalProject_CloudForm" target="_blank">
+      CloudWatch_repository
+    </a>
+  </p>
+
   <h2><span class="emoji">🌟</span>프로젝트 개요</h2>
   <p><strong>프로젝트 이름:</strong> Adu – Career Recommendation Web Application</p>
   <p>이 프로젝트는 <strong>사용자의 성격과 관심 분야를 분석해 AI가 맞춤형 직업을 추천하고, 관련 커리큘럼을 설계하며, 자기소개서 첨삭까지 제공하는 올인원 진로 추천 웹 서비스</strong>입니다.</p>
