@@ -1,5 +1,9 @@
 
 
+  <h2><span class="emoji">🌟</span>연관 Repository</h2>
+  <a href="[https://www.google.com](https://github.com/tkdals69/Final_Project_menifest)">menifest_reopsitory</a>
+  <a href="[https://www.google.com](https://github.com/tkdals69/FinalProject_CloudForm)">CloudWatch_repository</a>
+  
   <h1><span class="emoji">🚀</span>Adu: AI 기반 진로 추천 웹앱 소개</h1>
   
   <h2><span class="emoji">🌟</span>프로젝트 개요</h2>
